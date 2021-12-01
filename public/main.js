@@ -71,7 +71,7 @@ function requestRoom() {
 
 socket.on('responseRoom', function ([name, people, maxPeople]) {
   if (name !== 'error') {
-    //room = name;
+    room = name;
     console.log('<< Room Response', name);
     // ctx.fillText(name, 0, 10);
     // ctx.drawImage(back, canvas.width-cdWidth/2-60, canvas.height/2-cdHeight/4, cdWidth/2, cdHeight/2);
