@@ -8,8 +8,8 @@ app.use(express.static(__dirname + '/public'));
 io.on('connection', onConnection);
 http.listen(port, () => console.log('listening on port ' + port));
 
-const numRooms = 5;
-const maxPeople = 10;
+const numRooms = 2;
+const maxPeople = 3;
 
 let deck = Array.apply(null, Array(112)).map(function (_, i) {return i;});
 deck.splice(56, 1); //56
