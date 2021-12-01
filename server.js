@@ -314,30 +314,29 @@ function onConnection(socket) {
     console.log('>> Rooms exceeded');
   });
 
-  /**
+/**
    * Whenever someone is performing a disconnection,
    * leave its room and notify to the rest
    * @method
    */
-   //// TODO: Empty a room
-  socket.on('disconnecting', function() {
-    room = Object.keys(io.sockets.adapter.sids[socket.id])[1];
-    if (room !== undefined) {
-      clearInterval(data[room]['timeout']['id']);
-      io.to(room).emit('playerDisconnect', room);
-      console.log('>> ' + room + ': Player ' + socket.playerName + ' ('+
-                  socket.id + ') leaves the room');
-    }
-  });
-
-  /**
-   * Whenever disconnection is completed
-   * @method
-   */
-  socket.on('disconnect', function() {
-    console.log('>> Player ' + socket.playerName + ' ('+
-                socket.id + ') disconnected');
-  });
+ socket.on('disconnecting', function() {
+  room = Object.keys(io.sockets.adapter.sids[socket.id])[1];
+  if (room !== undefined) {
+    clearInterval(data[room]['timeout']['id']);
+    io.to(room).emit('playerDisconnect', room);
+    console.log('>> ' + room + ': Player ' + socket.playerName + ' ('+
+                socket.id + ') leaves the room');
+  }
+});
+​
+/**
+ * Whenever disconnection is completed
+ * @method
+ */
+socket.on('disconnect', function() {
+  console.log('>> Player ' + socket.playerName + ' ('+
+              socket.id + ') disconnected');
+});
 
   socket.on('drawCard', function(res) {
     let numPlayer = data[res[1]]['turn'];
