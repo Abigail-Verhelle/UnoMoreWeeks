@@ -13,7 +13,9 @@
   "author": "jane-doe",
   "license": "MIT",
   "dependencies": {
-    "express": "^4.9.8",
+    "bunny": "^1.0.1",
+    "express": "^4.17.1",
+    "node": "^17.1.0",
     "socket.io": "^4.4.0"
   },
   "engines": {
