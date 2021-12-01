@@ -314,7 +314,7 @@ function onConnection(socket) {
     console.log('>> Rooms exceeded');
   });
 
-/**
+  /**
    * Whenever someone is performing a disconnection,
    * leave its room and notify to the rest
    * @method
@@ -326,8 +326,8 @@ function onConnection(socket) {
         io.to(room).emit('playerDisconnect', room);
         console.log('>> ' + room + ': Player ' + socket.playerName + ' ('+ socket.id + ') leaves the room');
   }
-  })
-  
+  });
+
   /**
   * Whenever disconnection is completed
   * @method
