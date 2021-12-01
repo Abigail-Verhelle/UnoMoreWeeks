@@ -326,7 +326,7 @@ function onConnection(socket) {
         io.to(room).emit('playerDisconnect', room);
         console.log('>> ' + room + ': Player ' + socket.playerName + ' ('+ socket.id + ') leaves the room');
   }
-});
+  });
 ​
   /**
   * Whenever disconnection is completed
