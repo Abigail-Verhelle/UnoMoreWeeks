@@ -1,14 +1,12 @@
 {
-
-"name": "socket-uno",
-"version": "0.0.1",
-"description": "Uno game ",
-"dependencies": {
-  "express": "^4.17.1",
-  "socket.io": "^4.1.2"
-},
-"scripts": {
-  "start": "node server.js"
-}
-
+  "name": "socket-uno",
+  "version": "0.0.1",
+  "description": "Uno game ",
+  "dependencies": {
+    "express": "^4.17.1",
+    "socket.io": "^4.4.0"
+  },
+  "scripts": {
+    "start": "node server.js"
+  }
 }

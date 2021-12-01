@@ -14,16 +14,6 @@ Set up to automatically update with each push to the main brnach
 
 Show what is happening in the heroku logs --- heroku logs --tail
 
-
-
-
-------- A special thanks to... --------
-
-Google
-
-w3schools.com
-
-Starbucks
-
-Izan Pérez Cosano (the Uno cards themselves)
+Server.js -- server side / back end 
+main.js -- client side / front end
 
