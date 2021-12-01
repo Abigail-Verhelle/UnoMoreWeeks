@@ -1,16 +1,16 @@
 {
-  "name": "nodeexample",
-  "version": "1.0.0",
-  "description": "This example is so cool.",
+  "name": "socket-uno",
+  "version": "0.0.1",
+  "description": "UNO game on javascript",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node server.js"
   },
-  "keywords": [
-    "example",
-    "heroku"
-  ],
-  "author": "jane-doe",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eperezcosano/Uno.git"
+  },
+  "author": "Izan Pérez Cosano",
   "license": "MIT",
   "dependencies": {
     "bunny": "^1.0.1",
@@ -18,7 +18,9 @@
     "node": "^17.1.0",
     "socket.io": "^4.4.0"
   },
-  "engines": {
-    "node": "14.x"
+  "homepage": "https://github.com/eperezcosano/Uno#readme",
+  "dependencies": {
+    "express": "^4.15.2",
+    "socket.io": "^2.4.0"
   }
 }
