@@ -39,8 +39,7 @@ for (let i = 1; i <= numRooms; i++) {
   room['players'] = players;
   data['Room_'+i] = room;
 
-  for (let b = 0; b < maxPeople; b++)
-  console.log(rooms[b]);
+  
 }
 
 /**
