@@ -29,7 +29,7 @@ for (let i = 1; i <= numRooms; i++) {
   room['cardOnBoard'] = 0;
   room['people'] = 0;
   let players = [];
-  for (let j = 1; j < maxPeople; j++) {
+  for (let j = 0; j < maxPeople; j++) {
     let p = [];
     p['id'] = 0;
     p['name'] = "";
@@ -38,6 +38,9 @@ for (let i = 1; i <= numRooms; i++) {
   }
   room['players'] = players;
   data['Room_'+i] = room;
+
+  for (let b = 0; b < maxPeople; b++)
+  console.log(rooms[b]);
 }
 
 /**
