@@ -159,7 +159,7 @@ function startingCountdown(name) {
  */
 function startGame(name) {
   console.log('>> ' + name + ': Requesting game...');
-  let people = 3;
+  let people = 5;
   try {
     //people = io.sockets.adapter.rooms[name].length;
   } catch (e) {
