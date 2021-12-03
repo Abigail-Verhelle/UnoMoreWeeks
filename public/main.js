@@ -102,8 +102,8 @@ socket.on('countDown', function(countDown) {
 });
 
 socket.on('playerDisconnect', function() {
-  //ctx.clearRect(0, 0, canvas.width, canvas.height);
-  //socket.emit('leaveRoom', room);
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  socket.emit('leaveRoom', room);
   console.log('<< Player disconnected', room);
 });
 

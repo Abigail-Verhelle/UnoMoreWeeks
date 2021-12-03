@@ -8,8 +8,8 @@ app.use(express.static(__dirname + '/public'));
 io.on('connection', onConnection);
 http.listen(port, () => console.log('listening on port ' + port));
 
-const numRooms = 2;
-const maxPeople = 3;
+const numRooms = 1;
+const maxPeople = 3; //two to ten players 
 
 let deck = Array.apply(null, Array(112)).map(function (_, i) {return i;});
 deck.splice(56, 1); //56
@@ -159,13 +159,14 @@ function startingCountdown(name) {
  */
 function startGame(name) {
   console.log('>> ' + name + ': Requesting game...');
-  let people = 5;
+  let people;
   try {
-    //people = io.sockets.adapter.rooms[name].length;
+    people = io.sockets.adapter.rooms[name].length;
   } catch (e) {
     console.log('>> ' + name + ': No people here...');
     return;
   }
+  //how to know when to start the game 
   if (people >= 2) {
     console.log('>> ' + name + ': Starting');
     let sockets_ids = Object.keys(io.sockets.adapter.rooms[name].sockets);
