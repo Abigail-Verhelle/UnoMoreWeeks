@@ -3,26 +3,7 @@
   "version": "1.0.0",
   "description": "uno multiplayer",
   "main": "app.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": " tsc && node app.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/bahaaEldeen1999/uno-multiplayer.git"
-  },
-  "author": "bahaaEldeen1999",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/bahaaEldeen1999/uno-multiplayer/issues"
-  },
-  "homepage": "https://github.com/bahaaEldeen1999/uno-multiplayer#readme",
-  "devDependencies": {
-    "@types/express": "^4.17.6",
-    "@types/node": "^14.0.13",
-    "ts-loader": "^7.0.5",
-    "typescript": "^3.9.5"
-  },
+  
   "dependencies": {
     "babel-cli": "^6.26.0",
     "babel-preset-react-app": "^3.1.2",
@@ -35,3 +16,4 @@
     "socket.io": "^2.3.0"
   }
 }
+
