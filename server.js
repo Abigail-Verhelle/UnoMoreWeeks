@@ -169,7 +169,7 @@ function startGame(name) {
   //how to know when to start the game 
   if (people >= 2) {
     console.log('>> ' + name + ': Starting');
-    let sockets_ids = Object.keys(io.sockets.adapter.rooms.get(Name).size);
+    let sockets_ids = Object.keys(io.sockets.adapter.Players.get(Name).size);
     for (let i = 0; i < people; i++) {
       data[name]['players'][i]['id'] = sockets_ids[i];
       let playerName = io.sockets.sockets[sockets_ids[i]].playerName;
