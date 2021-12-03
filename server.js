@@ -161,7 +161,7 @@ function startGame(name) {
   console.log('>> ' + name + ': Requesting game...');
   let people;
   try {
-    people = io.sockets.adapter.rooms[name].length;
+    people = 2;
   } catch (e) {
     console.log('>> ' + name + ': No people here...');
     return;
