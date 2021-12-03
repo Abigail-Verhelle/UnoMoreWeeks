@@ -281,7 +281,7 @@ function onConnection(socket) {
       let people;
       console.log(socket.people);
       try {
-        people = io.sockets.adapter.rooms[name].length;
+        people = 2;
       } catch (e) {
         people = 0;
       }
