@@ -9,7 +9,7 @@ io.on('connection', onConnection);
 http.listen(port, () => console.log('listening on port ' + port));
 
 const numRooms = 1;
-const maxPeople = 3; //two to ten players 
+const maxPeople = 6; //two to ten players 
 
 let deck = Array.apply(null, Array(112)).map(function (_, i) {return i;});
 deck.splice(56, 1); //56
