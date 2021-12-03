@@ -169,7 +169,7 @@ function startGame(name) {
   //how to know when to start the game 
   if (people == 2) {
     console.log('>> ' + name + ': Starting');
-    let sockets_ids = 0;
+    let sockets_ids = 1;
     for (let i = 0; i <= people; i++) {
       data[name]['players'][i]['id'] = sockets_ids[i];
       let playerName = io.sockets.sockets[sockets_ids[i]].playerName;
