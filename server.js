@@ -161,7 +161,7 @@ function startGame(name) {
   console.log('>> ' + name + ': Requesting game...');
   let people;
   try {
-    people = 2;
+    people = Object.keys(io.sockets.adapter.Players.get(Name).size);
   } catch (e) {
     console.log('>> ' + name + ': No people here...');
     return;
@@ -170,7 +170,7 @@ function startGame(name) {
   if (people >= 2) {
     console.log('>> ' + name + ': Starting');
     let sockets_ids = Object.keys(io.sockets.adapter.Players.get(Name).size);
-    for (let i = 0; i < people; i++) {
+    for (let i = 0; i <= people; i++) {
       data[name]['players'][i]['id'] = sockets_ids[i];
       let playerName = io.sockets.sockets[sockets_ids[i]].playerName;
       data[name]['players'][i]['name'] = playerName;
