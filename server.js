@@ -161,13 +161,13 @@ function startGame(name) {
   console.log('>> ' + name + ': Requesting game...');
   let people;
   try {
-    people = Object.keys(io.sockets.adapter.Players.get(Name).size);
+    people = 2;
   } catch (e) {
     console.log('>> ' + name + ': No people here...');
     return;
   }
   //how to know when to start the game 
-  if (people >= 2) {
+  if (people == 2) {
     console.log('>> ' + name + ': Starting');
     let sockets_ids = Object.keys(io.sockets.adapter.Players.get(Name).size);
     for (let i = 0; i <= people; i++) {
