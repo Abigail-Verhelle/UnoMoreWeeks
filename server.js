@@ -18,7 +18,7 @@ deck.splice(82, 1); //84
 deck.splice(95, 1); //98
 
 let data = [];
-
+for (let i = 1; i <= numRooms; i++) {
   let room = [];
   room['timeout'] = [];
   room['timeout']['id'] = 0;
@@ -40,7 +40,7 @@ let data = [];
   data['Room_'+i] = room;
 
   
-
+}
 
 /**
  * Shuffles all elements in array
