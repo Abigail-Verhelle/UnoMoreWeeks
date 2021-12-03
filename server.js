@@ -279,6 +279,7 @@ function onConnection(socket) {
     for (let i = 1; i <= numRooms; i++) {
       let name = 'Room_' + i;
       let people;
+      console.log(socket.people);
       try {
         people = io.sockets.adapter.rooms[name].length;
       } catch (e) {
@@ -298,7 +299,7 @@ function onConnection(socket) {
         }
       }*/
 
-      if (people < maxPeople && data[name]['timeout']['s'] > 0) {
+      if (people <= maxPeople && data[name]['timeout']['s'] > 0) {
         socket.join(name);
         console.log('>> User ' + socket.playerName +
         ' connected on ' + name + ' (' + (people + 1) + '/' + maxPeople + ')');
