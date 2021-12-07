@@ -2,7 +2,7 @@
 
 let width = innerWidth;
 let height = innerHeight;
-let gameId = 1; /// changed
+let gameId = undefined;
 let players = [];
 let cards = [];
 let playerName = undefined;
@@ -21,6 +21,8 @@ let colorMap = {
     "green":"#55aa55",
     "blue":"#5555fd"
 }
+
+//give the player an id 
 for(let i=0;i<32;i++){
     playerId += String((Math.floor(Math.random()*10)))
 }
@@ -95,7 +97,7 @@ addEventListener('DOMContentLoaded',()=>{
             $("#gameIdText").text("creating the game....");
             socket.on("createdGameId",(data)=>{
                     if(data.playerId != playerId || gameId != undefined)return;
-                    gameId = data.gameId;
+                    gameId = 1;
                     $("#gameIdText").text(data.gameId);
                     playerIndex = 0;
                     
