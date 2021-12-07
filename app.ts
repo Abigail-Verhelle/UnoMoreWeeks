@@ -47,10 +47,10 @@ io.on("connection", (socket) => {
         gameStart: false,
         isReversed:false
       });
-      await newGame.save();
+      await newGame.save();  ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
       // send back id to host
       socket.emit("createdGameId", {
-        gameId: newGame._id,
+        gameId: 1,
         playerId:data.playerId
       });
       // set gameid property on the socket object
