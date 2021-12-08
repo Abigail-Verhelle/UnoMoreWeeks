@@ -9,8 +9,6 @@ import dotenv from 'dotenv';
 import {  gameModel  } from './model/db-model';
 dotenv.config();
 
-// create the game
-let gameController: Game = new Game();
 
 const app = express();
 const PORT = 3000;
@@ -23,6 +21,10 @@ app.use(cors());
 app.use(express.static('output'));
 app.use(express.static('styles'));
 const io = socketio.listen(server);
+
+
+// create the game
+let gameController: Game = new Game();
 
 app.get('/', (req,res) => {
   res.sendFile(path.join(__dirname,"index.html"))
