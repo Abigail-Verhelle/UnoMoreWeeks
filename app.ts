@@ -15,30 +15,10 @@ let gameController: Game = new Game();
 const app = express();
 const PORT = 3000;
 const server = http.createServer(app);
-// mongoose.connect(process.env.CONNECTION_STRING, { useNewUrlParser: true });
-// mongoose.connection.once("open", () => {
-//   console.log("connected to db "+process.env.CONNECTION_STRING)
-// })
-
-require('.env').config();
-
-module.exports = async () => {
-    await mongoose.connect(process.env.MONGOPATH, {
-        keepAlive: true,
-        useNewUrlParser: true,
-        useUnifiedTopology: true,
-        useFindAndModify: false,
-    })
-        .then(x => {
-            console.log(
-                `Connected to Mongo! Database name: "${x.connections[0].name}"`,
-            );
-        })
-        .catch(err => {
-            console.error('Error connecting to mongo', err);
-        });
-    return mongoose;
-};
+await mongoose.connect(process.env.CONNECTION_STRING, { useNewUrlParser: true });
+mongoose.connection.once("open", () => {
+  console.log("connected to db "+process.env.CONNECTION_STRING)
+})
 app.use(cors());
 app.use(express.static('output'));
 app.use(express.static('styles'));
@@ -67,7 +47,7 @@ io.on("connection", (socket) => {
         gameStart: false,
         isReversed:false
       });
-      await newGame.save();  ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+      await newGame.save();  
       // send back id to host
       socket.emit("createdGameId", {
         gameId: newGame._id,
