@@ -2,7 +2,7 @@
 
 let width = innerWidth;
 let height = innerHeight;
-let gameId = 1;
+let gameId = undefined;
 let players = [];
 let cards = [];
 let playerName = undefined;
@@ -97,7 +97,7 @@ addEventListener('DOMContentLoaded',()=>{
             $("#gameIdText").text("creating the game....");
             socket.on("createdGameId",(data)=>{
                     if(data.playerId != playerId || gameId != undefined)return;
-                    gameId = data.gameId; /////////
+                    gameId = data.gameId; //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
                     $("#gameIdText").text(data.gameId);
                     playerIndex = 0;
                     
