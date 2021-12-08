@@ -20,7 +20,7 @@ const game_1 = __importDefault(require("./source/game"));
 const path_1 = __importDefault(require("path"));
 const mongoose_1 = __importDefault(require("mongoose"));
 const dotenv_1 = __importDefault(require("dotenv"));
-const db_model_1 = require("./model/db-model");
+const db_model_1 = require("./model/unomoreweeks");
 dotenv_1.default.config();
 // create the game
 let gameController = new game_1.default();
