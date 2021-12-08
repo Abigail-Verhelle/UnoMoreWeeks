@@ -15,7 +15,7 @@ let gameController: Game = new Game();
 const app = express();
 const PORT = 3000;
 const server = http.createServer(app);
-await mongoose.connect(process.env.CONNECTION_STRING, { useNewUrlParser: true });
+mongoose.connect(process.env.CONNECTION_STRING, { useNewUrlParser: true });
 mongoose.connection.once("open", () => {
   console.log("connected to db "+process.env.CONNECTION_STRING)
 })
