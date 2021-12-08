@@ -15,10 +15,17 @@ let gameController: Game = new Game();
 const app = express();
 const PORT = 3000;
 const server = http.createServer(app);
-mongoose.connect(process.env.CONNECTION_STRING, { useNewUrlParser: true });
-mongoose.connection.once("open", () => {
-  console.log("connected to db "+process.env.CONNECTION_STRING)
-})
+
+const MONGODB_URI = 'mongodb+srv://Boss:unomoreweeks@unomoreweeks.kuysw.mongodb.net/myFirstDatabase?retryWrites=true&w=majority'
+mongoose.connect(MONGODB_URI || 'mongodb://localhost/UnoMoreWeeks', { useNewUrlParser: true }); ///( link to connect -- where the connection is ,{ pass in options })
+
+//testing conection and outputting it 
+mongoose.connection.on('connected', () => {
+  console.log('Mongoose connected');
+});
+// mongoose.connection.once("open", () => {
+//   console.log("connected to db "+process.env.CONNECTION_STRING)
+// })
 app.use(cors());
 app.use(express.static('output'));
 app.use(express.static('styles'));
