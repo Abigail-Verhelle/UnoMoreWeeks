@@ -2,7 +2,7 @@
 
 let width = innerWidth;
 let height = innerHeight;
-let gameId = undefined;
+let gameId = [1,2,3];
 let players = [];
 let cards = [];
 let playerName = undefined;
