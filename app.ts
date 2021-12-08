@@ -20,8 +20,7 @@ const server = http.createServer(app);
 //   console.log("connected to db "+process.env.CONNECTION_STRING)
 // })
 
-const mongoose = require('mongoose');
-require('dotenv').config();
+require('.env').config();
 
 module.exports = async () => {
     await mongoose.connect(process.env.MONGOPATH, {
