@@ -9,22 +9,41 @@ import dotenv from 'dotenv';
 import {  gameModel  } from './model/db-model';
 dotenv.config();
 
+// create the game
+let gameController: Game = new Game();
 
 const app = express();
 const PORT = 3000;
 const server = http.createServer(app);
-mongoose.connect(process.env.CONNECTION_STRING, { useNewUrlParser: true });
-mongoose.connection.once("open", () => {
-  console.log("connected to db "+process.env.CONNECTION_STRING)
-})
+// mongoose.connect(process.env.CONNECTION_STRING, { useNewUrlParser: true });
+// mongoose.connection.once("open", () => {
+//   console.log("connected to db "+process.env.CONNECTION_STRING)
+// })
+
+const mongoose = require('mongoose');
+require('dotenv').config();
+
+module.exports = async () => {
+    await mongoose.connect(process.env.MONGOPATH, {
+        keepAlive: true,
+        useNewUrlParser: true,
+        useUnifiedTopology: true,
+        useFindAndModify: false,
+    })
+        .then(x => {
+            console.log(
+                `Connected to Mongo! Database name: "${x.connections[0].name}"`,
+            );
+        })
+        .catch(err => {
+            console.error('Error connecting to mongo', err);
+        });
+    return mongoose;
+};
 app.use(cors());
 app.use(express.static('output'));
 app.use(express.static('styles'));
 const io = socketio.listen(server);
-
-
-// create the game
-let gameController: Game = new Game();
 
 app.get('/', (req,res) => {
   res.sendFile(path.join(__dirname,"index.html"))
