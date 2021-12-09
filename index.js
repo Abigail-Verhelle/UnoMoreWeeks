@@ -9,6 +9,8 @@ import { Timestamp } from "~/utils/firebase/index";
 import useTranslation from "next-translate/useTranslation";
 import Router from "next-translate/Router";
 
+web: node ./index.js 
+
 export default function NewGame() {
   const { t } = useTranslation();
   const [value, setValue] = useState("2");
