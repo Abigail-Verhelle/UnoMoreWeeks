@@ -35,7 +35,7 @@ app.use(cors_1.default());
 app.use(express_1.default.static('output'));
 app.use(express_1.default.static('styles'));
 const io = socket_io_1.default.listen(server);
-app.get('/', (req, res) => {
+('/', (req, res) => {
     res.sendFile(path_1.default.join(__dirname, "index.html"));
 });
 io.on("connection", (socket) => {
