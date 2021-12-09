@@ -7,10 +7,8 @@
     "node": "14.x"
   },
   "scripts": {
-    "dev": "next-translate && next dev",
-    "build": "next-translate && next build",
-    "start": "next start",
-    "test": "jest"
+    "start": "node index.js",
+    "build": "webpack"
   },
   "keywords": [],
   "author": "",
