@@ -7,7 +7,7 @@
     "node": "14.x"
   },
   "scripts": {
-    "start": "next start"
+    "start": "next build"
   },
   "dependencies": {
     "@sentry/browser": "^5.30.0",
