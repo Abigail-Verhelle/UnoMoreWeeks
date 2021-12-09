@@ -17,6 +17,7 @@ const PORT = 3000;
 const server = http.createServer(app);
 
 const MONGODB_URI = 'mongodb+srv://Boss:unomoreweeks@unomoreweeks.kuysw.mongodb.net/myFirstDatabase?retryWrites=true&w=majority';
+console.log('mongodb' + MONGODB_URI);
 mongoose.connect( MONGODB_URI || 'mongodb://localhost/UnoMoreWeeks', { useNewUrlParser: true }); ///( link to connect -- where the connection is ,{ pass in options })
 
 //testing conection and outputting it 
