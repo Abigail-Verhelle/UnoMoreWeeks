@@ -7,7 +7,7 @@
     "node": "6.x"
   },
   "scripts": {
-    "start": "node index.js"
+    "start": "node pages/index.js"
   },
   "dependencies": {
     "@sentry/browser": "^5.30.0",
