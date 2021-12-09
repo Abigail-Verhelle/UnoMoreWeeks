@@ -6,6 +6,11 @@
   "engines": {
     "node": "14.x"
   },
+  "scripts": {
+    "start": "node index.js",
+    "build": "ng build",
+    "heroku-postbuild": "ng build --prod" 
+  },
   "dependencies": {
     "@sentry/browser": "^5.30.0",
     "classnames": "^2.3.1",
