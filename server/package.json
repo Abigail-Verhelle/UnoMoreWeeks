@@ -3,6 +3,7 @@
   "version": "0.0.1",
   "description": "my first socket.io app",
   "dependencies": {
+    "license": "^1.0.3",
     "node": "^17.2.0",
     "socket.io": "^4.4.0",
     "yarn.lock": "^0.0.1-security"
