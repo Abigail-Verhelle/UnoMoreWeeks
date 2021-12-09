@@ -5,9 +5,11 @@
   "main": "index.js",
   "engines": {
     "node": "14.x"
-  },
-  "scripts": {
-    "start": "index.js"
+  },  "scripts": {
+    "dev": "next-translate && next dev",
+    "build": "next-translate && next build",
+    "start": "next start",
+    "test": "jest"
   },
   "dependencies": {
     "@sentry/browser": "^5.30.0",
