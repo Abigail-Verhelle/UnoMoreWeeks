@@ -1,4 +1,7 @@
-# multiplayerSnake
-Code for multiplayer snake game with [socket.io tutorial](https://www.youtube.com/watch?v=ppcBIHv_ZPs) on the Traversy Media YouTube channel.
+we tried and I think that is what matters 
 
-If you want to see how to deploy the game check out [this video](https://www.youtube.com/watch?v=M9RDYkFs-EQ)
+we both our whole heart, lives and sanity into this app 
+
+we will be taking all the sander we know 
+
+however please pass us 
