@@ -1,0 +1,14 @@
+{
+  "allLanguages": ["es", "en"],
+  "currentPagesDir": "pages_",
+  "defaultLanguage": "es",
+  "defaultLangRedirect": "root",
+  "finalPagesDir": "pages",
+  "localesPath": "locales",
+  "pages": {
+    "*": ["common"],
+    "/": ["index"],
+    "/rooms/[roomId]": ["roomId"],
+    "/rooms/[roomId]/players/[playerId]": ["playerId"]
+  }
+}

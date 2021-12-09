@@ -1,0 +1,34 @@
+{
+  "name": "uno-game",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next-translate && next dev",
+    "build": "next-translate && next build",
+    "start": "next start",
+    "test": "jest"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@sentry/browser": "^5.16.1",
+    "classnames": "^2.2.6",
+    "dotenv": "^8.2.0",
+    "firebase": "^7.14.2",
+    "next": "^9.3.6",
+    "next-translate": "^0.17.1",
+    "react": "^16.13.1",
+    "react-copy-to-clipboard": "^5.0.2",
+    "react-dom": "^16.13.1",
+    "react-modal": "^3.11.2"
+  },
+  "devDependencies": {
+    "@fullhuman/postcss-purgecss": "^2.2.0",
+    "autoprefixer": "^9.7.6",
+    "jest": "^26.0.1",
+    "postcss-import": "^12.0.1",
+    "tailwindcss": "^1.4.4"
+  }
+}

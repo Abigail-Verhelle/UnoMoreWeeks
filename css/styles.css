@@ -1,0 +1,36 @@
+/* purgecss start ignore */
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+/* purgecss end ignore */
+
+@import "tailwindcss/utilities";
+@import "modal.css";
+
+.h-30 {
+  height: 7rem;
+}
+@media (min-width: 768px) {
+  .md\:h-30 {
+    height: 7rem;
+  }
+}
+@keyframes playerName {
+  0% {
+    opacity: 1;
+    color: white;
+  }
+  100% {
+    opacity: 0.4;
+    color: white;
+    text-shadow: none;
+  }
+}
+.animation {
+  animation: playerName 1s linear infinite;
+}
+
+.height-screen {
+  height: 100vh; /* Fallback for browsers that do not support Custom Properties */
+  height: calc(var(--vh, 1vh) * 100);
+}
+/* @media only screen and (max-device-width: 768px) and (-webkit-min-device-pixel-ratio: 2) { */
