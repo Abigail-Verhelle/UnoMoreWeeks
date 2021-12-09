@@ -10,6 +10,6 @@
     "yarn.lock": "^0.0.1-security"
   },
   "scripts": {
-    "start": "yarn server/server.js"
+    "start": "node server.js"
   }
 }
