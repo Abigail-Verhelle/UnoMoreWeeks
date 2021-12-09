@@ -7,6 +7,6 @@
     "socket.io": "^4.4.0"
   },
   "scripts": {
-    "start": "node server.js"
+    "start": "yarn server.js"
   }
 }
